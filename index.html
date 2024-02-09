@@ -19,14 +19,17 @@
     <div class="container">
         <div class="app-wrapper">
             <h1 class="title">What tasks do you have to do?
+           
             <form class="form" id="to-do-app">
                 <div class="form-group">
-                    <input type="text" class="form-input" placeholder="Today I want to">
-                    <button class="btn" type="submit"> Add</button>
+                    <input type="text" class="form-input" placeholder="Today I want to...">
+                    <button class="btn" type="submit"> Add <l class="ri-add-line"></l> </button>
                 </div>
             </form>
-            <ul class="to-do-list" id="to-do-list">
-                <li class="to-do-items">
+
+            <ul class="to-do-list hidde" id="to-do-list">
+                
+                <li class="to-do-item is-edit">
                     <form class="form">
                         <div class="form-group">
                             <p class="to-do-text">Book Flights</p>
@@ -44,7 +47,7 @@
                         </div>
                     </form>
                 </li>
-                <li class="to-do-items">
+                <li class="to-do-item is-edit">
                     <form class="form">
                         <div class="form-group">
                             <p class="to-do-text">Keep coding</p>
@@ -62,7 +65,7 @@
                         </div>
                     </form>
                 </li>
-                <li class="to-do-items">
+                <li class="to-do-item is-edit">
                     <form class="form">
                         <div class="form-group">
                             <p class="to-do-text">Study PowerApps</p>
@@ -80,6 +83,7 @@
                         </div>
                     </form>
                 </li>
+
             </ul>
                 
         </div>

@@ -2,7 +2,10 @@
   --off-white: #f5f5f5;
   --body-color: #212529;
   --primary: #14746f;
-
+  --primary-light: #DFF6E8;
+  --primary-dark: #036666;
+  --danger-light: #FFF0F3;
+  --danger-dark: #590D22;
 }
 
 * {
@@ -15,23 +18,23 @@ outline: none;
 
 html {
   font-size: 10px;
-  height: 100;
+  height: 100%;
   min-height: 100%;
 }
 
 body{
-  font-family: sans-serif;
+  font-family: 'jost', sans-serif;
   height: 100%;
   width: 100%;
-  font-size: 1rem;
-  background-color: rgb(245, 246, 245);
+  font-size: 1.6rem;
+  background-color: var(--off-white);
   display: flex;
   justify-content: center;
 }
 
 .container {
   width:90%;
-  max-width: 50rem;
+  max-width: 60rem;
   margin: 2rem auto;
 }
 
@@ -54,7 +57,7 @@ body{
 
 .form-input {
   --off-white: #adb5bd;
-  display: flex;
+  display: block;
   width: 100%;
   flex:auto;
   background-color: transparent;
@@ -75,13 +78,14 @@ body{
   padding: 2rem 2rem;
   font-size: 1.6rem;
   font-family: inherit;
-  display: flex;
+  display: inline-flex;
   gap: 1.2rem;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   border: 0;
-  border-radius: 0.6rem;background-color: var(--primary);
+  border-radius: 0.6rem;
+  background-color: var(--primary);
   color: var(--off-white);
   transition: box-shadow 0.3s ease-in-out;
 }
@@ -95,7 +99,7 @@ body{
 --off-white:#adb5bd;
 margin-top: 4rem;
 overflow: hidden auto;
-border-radius: 0.5rem;
+border-radius: 0.6rem;
 border: 0.2rem solid var(--off-white);
 max-height: 80rem;
 }
@@ -129,4 +133,38 @@ max-height: 80rem;
 .options .btn.btn-update {
   background-color: var(--primary-light);
   color: var(--primary-dark);
+}
+
+.options .btn.btn-update:hover,
+.options .btn.btn-update:focus {
+ box-shadow: 0 0 0 0.2rem var(--primary); 
+}
+
+.options .btn.btn-delete {
+  background-color: var(--danger-light);
+  color: var(--danger-dark);
+}
+
+.options .btn.btn-delete:hover,
+.options .btn.btn-delete:focus {
+ box-shadow: 0 0 0 0.2rem var(--danger-dark); 
+}
+
+
+.to-do-list .form-input {
+  display: none;
+}
+
+.to-do-list .to-do-item:not(:last-of-type) {
+  --offwhite: #adb5bd;
+  border-bottom:  0.2rem solid var(--offwhite);
+}
+
+.to-do-list.hidden,
+.to-do-item.is-edit .to-do-text {
+  display: none;
+}
+
+.to-do-item.is-edit .form-input {
+  display: block;
 }
