@@ -14,4 +14,43 @@ body{
   margin: 2rem auto;
   }
 
+  .title{
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+.form-group {
+  width: 100%;
+  position: relative;
+  display: flex;
+  gap: 2rem;
+}
+
+.form-input {
+  display: flex;
+  width: 100%;
+  flex:auto;
+  background-color: transparent;
+  border: 0.1rem solid;
+  border-radius: 0.6rem;
+  padding: 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-input:hover,
+.form-input:focus {
+  border-color: black;
+}
+
+.btn {
+  padding: 2rem 4rem;
   
+}
+
+
